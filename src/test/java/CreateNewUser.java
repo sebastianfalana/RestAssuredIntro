@@ -50,8 +50,7 @@ public class CreateNewUser extends TestBase{
 
         Assert.assertEquals(jsonPath.get("username"), "Bret");
 
-
-
-
     }
+
+
 }

@@ -50,4 +50,19 @@ public class GetAllPosts extends TestBase{
                 .statusCode(200);
     }
 
+    @Test
+    public void shouldGetUsersWithForUserWithUserName() {
+        Response response =
+        given()
+                .queryParam("username","Bret").
+                when()
+                .get(baseUrl+users).
+                then()
+                .statusCode(200)
+                .extract().response();
+
+        JsonPath jasonPath = response.jsonPath();
+        Assert.assertEquals(jasonPath.get("[0].id").toString(),"1");
+    }
+
 }
