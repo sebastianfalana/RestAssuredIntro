@@ -39,4 +39,15 @@ public class GetAllPosts extends TestBase{
 
         Assert.assertEquals(jsonPath.get("address.geo.lat"), "-37.3159");
     }
+
+    @Test
+    public void shouldGetFirstPostWithPathVariable() {
+        given()
+                .pathParams("postId","1").
+        when()
+                .get(baseUrl+users+"/{postId}").
+        then()
+                .statusCode(200);
+    }
+
 }
