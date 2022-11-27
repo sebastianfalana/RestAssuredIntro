@@ -11,4 +11,14 @@ public class GetAllPosts {
                 .then()
                 .statusCode(200);
     }
+
+    @Test
+    public void  shouldGetFirstPost() {
+        when()
+                .get("https://jsonplaceholder.typicode.com/users/1")
+                .then()
+                .statusCode(200)
+                .log()
+                .all();
+    }
 }
