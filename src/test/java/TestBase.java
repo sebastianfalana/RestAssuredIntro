@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-    public String baseUrl = "https://jsonplaceholder.typicode.com/users/";
+    public String baseUrl = "https://jsonplaceholder.typicode.com";
 
     @BeforeMethod
     public void  setup(){
