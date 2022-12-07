@@ -44,5 +44,17 @@ public class GetAllTodos extends TestBase{
 
     }
 
+    @Test
+    public void shouldGetAllTodosWithUserId4AndCompleted(){
+        given()
+                .queryParam("userId","1")
+                .queryParam("completed",true).
+                when()
+                .get(baseUrl+todos).
+                then()
+                .statusCode(200);
+
+    }
+
 
 }
