@@ -30,9 +30,9 @@ public class PostTodos extends TestBase{
 
         JsonPath jsonPath = response.jsonPath();
 
-        Assert.assertEquals(jsonPath.get("userId"),"9");
-//        Assert.assertEquals(jsonPath.get("title"),"I should do the homework");
-//        Assert.assertEquals(jsonPath.get("completed"),true);
+        Assert.assertEquals(jsonPath.get("title"),"I should do the homework");
+        Assert.assertEquals(jsonPath.get("completed"),true);
+        Assert.assertEquals(jsonPath.get("userId").toString(),"9");
 
     }
 }
