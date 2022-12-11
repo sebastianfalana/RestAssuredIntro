@@ -1,10 +1,9 @@
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
+import base.TestBase;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class DeleteUsers extends TestBase{
+public class DeleteUsers extends TestBase {
     public String users = "/users";
     @Test
     public void shouldUpdateUser() {

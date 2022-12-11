@@ -1,4 +1,4 @@
-import io.restassured.RestAssured;
+import base.TestBase;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class CreateNewUser extends TestBase{
+public class CreateNewUser extends TestBase {
 
     String body = "{\n" +
             "    \"name\": \"Seba Seba\",\n" +

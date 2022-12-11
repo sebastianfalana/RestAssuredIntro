@@ -1,3 +1,4 @@
+import base.TestBase;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -6,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class PostTodos extends TestBase{
+public class PostTodos extends TestBase {
 
     String body = "{\n" +
             "    \"userId\": 9,\n" +
